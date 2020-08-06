@@ -1,0 +1,15 @@
+<html>
+<head><title>Let's play a spoofy game!</title></head>
+<body>
+<script>
+	const a = document.createElement('a');
+	for (let i=0; i<0xffff; ++i) {
+		const url = `https://test${String.fromCodePoint(i)}.s0md3v.io`;
+		a.href = url;
+		if (!a.href.startsWith('https://xn--')) {
+			document.write(`${i.toString(16)} <a href="${url}">${url}</a><br>`);
+		}
+	}
+</script>
+</body>
+</html>
